@@ -1,5 +1,6 @@
-FROM jenkins/jenkins:lts
-MAINTAINER 4oh4
+FROM jenkins/jenkins
+
+LABEL Author carlobarraco
 
 # Derived from https://github.com/getintodevops/jenkins-withdocker (miiro@getintodevops.com)
 
@@ -20,7 +21,8 @@ RUN apt-get update && \
    apt-get update && \
    apt-get -y --no-install-recommends install docker-ce && \
    apt-get clean && \
-   usermod -aG docker jenkins
+   usermod -aG docker jenkins && \
+   chmod 666 /var/run/docker.sock
 
 # drop back to the regular jenkins user - good practice
 USER jenkins
