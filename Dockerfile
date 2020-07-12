@@ -21,8 +21,7 @@ RUN apt-get update && \
    apt-get update && \
    apt-get -y --no-install-recommends install docker-ce && \
    apt-get clean && \
-   usermod -aG docker jenkins && \
-   chmod 666 /var/run/docker.sock
+   usermod -aG docker jenkins
 
 # drop back to the regular jenkins user - good practice
 USER jenkins
