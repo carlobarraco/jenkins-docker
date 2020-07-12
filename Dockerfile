@@ -23,5 +23,7 @@ RUN apt-get update && \
    apt-get clean && \
    usermod -aG docker jenkins
 
+
 # drop back to the regular jenkins user - good practice
 USER jenkins
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/jenkins.sh"]
