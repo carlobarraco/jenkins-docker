@@ -36,4 +36,4 @@ Alternatively, you can clone this repository, build the image from the Dockerfil
 
 After starting the docker container, you will most likey need to run the following command to make the docker socket accessible to the container:
 
-    chmod 666 /var/run/docker.sock
+    chmod 666 /var/run/docker.sock # run this on host
