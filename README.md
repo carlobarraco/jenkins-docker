@@ -1,5 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/cbarraco/jenkins-docker)](https://hub.docker.com/r/cbarraco/jenkins-docker)
 
 # jenkins-docker
 Jenkins in a Docker container, with Docker inside.
