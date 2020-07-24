@@ -33,3 +33,7 @@ Alternatively, you can clone this repository, build the image from the Dockerfil
 	    -v /var/run/docker.sock:/var/run/docker.sock \
 	    --restart unless-stopped \
 	    jenkins-docker
+
+After starting the docker container, you will most likey need to run the following command to make the docker socket accessible to the container:
+
+    chmod 666 /var/run/docker.sock
