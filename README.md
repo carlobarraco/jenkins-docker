@@ -17,15 +17,16 @@ Its possible to run into some problems with Docker running inside another Docker
 
 ### Running the container
 The easiest way is to pull from Docker Hub:
-
+```bash
     docker run -it -p 8080:8080 -p 50000:50000 \
 	    -v jenkins_home:/var/jenkins_home \
 	    -v /var/run/docker.sock:/var/run/docker.sock \
 	    --restart unless-stopped \
 	    cbarraco/jenkins-docker
+```
 
 Alternatively, you can clone this repository, build the image from the Dockerfile, and then run the container
-
+```bash
     docker build -t jenkins-docker .
 
     docker run -it -p 8080:8080 -p 50000:50000 \
@@ -33,7 +34,8 @@ Alternatively, you can clone this repository, build the image from the Dockerfil
 	    -v /var/run/docker.sock:/var/run/docker.sock \
 	    --restart unless-stopped \
 	    jenkins-docker
-
+```
 After starting the docker container, you will most likey need to run the following command to make the docker socket accessible to the container:
-
+```bash
     chmod 666 /var/run/docker.sock # run this on host
+```
