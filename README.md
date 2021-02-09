@@ -2,7 +2,7 @@
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/cbarraco/jenkins-docker)](https://hub.docker.com/r/cbarraco/jenkins-docker)
 
 # jenkins-docker
-Jenkins in a Docker container, with Docker inside.
+Jenkins in a Docker container, with Docker inside. Forked from 4OH4/jenkins-docker with the only real change being that this image uses jenkins:latest whereas 4OH4/jenkins-docker uses jenkins:lts.
 
 There is a blog post associated with this repository, with more information: [Quickstart CI with Jenkins and Docker-in-Docker](https://medium.com/swlh/quickstart-ci-with-jenkins-and-docker-in-docker-c3f7174ee9ff?source=friends_link&sk=e2038207f7049c9000acc56e86b0442e)
 
